@@ -391,7 +391,7 @@ function initContactForm() {
     const message = document.getElementById('contact-message').value || 'Sem mensagem adicional';
 
     // Create WhatsApp text
-    let waText = `Olá, DLUKZ! Gostaria de solicitar um orçamento:\n\n`;
+    let waText = `Olá, Delukaz! Gostaria de solicitar um orçamento:\n\n`;
     waText += `*Data do Evento:* ${date}\n`;
     waText += `*Tipo de Evento:* ${eventType}\n`;
     waText += `*Cidade:* ${city}\n`;
