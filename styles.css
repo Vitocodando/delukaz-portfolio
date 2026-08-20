@@ -318,12 +318,10 @@ button {
 .btn-primary {
   background: var(--gradient-primary);
   color: var(--bg-primary);
-  box-shadow: var(--shadow-glow-cyan);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 50px rgba(237, 158, 111, 0.5), 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary:active {
@@ -341,7 +339,6 @@ button {
   border-color: var(--accent-cyan);
   background: rgba(237, 158, 111, 0.08);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow-cyan);
 }
 
 .btn-sm {
@@ -366,7 +363,6 @@ button {
 
 .glass-card:hover {
   border-color: rgba(237, 158, 111, 0.2);
-  box-shadow: 0 0 30px rgba(237, 158, 111, 0.08);
 }
 
 /* ============================================
@@ -1230,7 +1226,6 @@ button {
 .form-input:focus {
   border-color: var(--accent-cyan);
   background: rgba(0, 229, 255, 0.04);
-  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.1);
 }
 
 .form-input:invalid:not(:placeholder-shown) {
@@ -1364,7 +1359,6 @@ textarea.form-input {
   border-color: var(--accent-cyan);
   background: rgba(0, 229, 255, 0.08);
   transform: translateY(-3px);
-  box-shadow: var(--shadow-glow-cyan);
 }
 
 .footer-social a svg {
