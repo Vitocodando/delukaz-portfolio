@@ -943,7 +943,6 @@ button {
   padding: var(--space-5xl) 0;
   background: var(--bg-secondary);
   position: relative;
-  overflow: hidden;
 }
 
 .presskit-section::before {
@@ -1011,7 +1010,9 @@ button {
 
 /* ---------- Gallery Carousel ---------- */
 .gallery-wrapper {
-  position: relative;
+  position: sticky;
+  top: 120px;
+  z-index: 10;
 }
 
 .gallery-title {
@@ -1138,6 +1139,11 @@ button {
 
   .presskit-bio {
     padding-right: 0;
+  }
+  
+  .gallery-wrapper {
+    position: relative;
+    top: auto;
   }
 }
 
