@@ -705,6 +705,23 @@ button {
   border: none;
 }
 
+.coming-soon-placeholder {
+  height: 352px;
+  width: 100%;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 /* ---------- Floating Mini Player ---------- */
 .mini-player {
   position: fixed;
