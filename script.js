@@ -399,7 +399,7 @@ function initContactForm() {
     waText += `*Mensagem:* ${message}`;
 
     // NOTA: Substitua pelo número real do WhatsApp (apenas números, com DDI + DDD. Ex: 5511999999999)
-    const waNumber = '556285524044'; 
+    const waNumber = '5562985524044'; 
     const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(waText)}`;
 
     // Update button state
