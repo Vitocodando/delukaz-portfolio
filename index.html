@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="DLUKZ — Artista de música eletrônica. Sets exclusivos, apresentações em festivais e eventos corporativos. Contrate agora.">
+  <meta name="keywords" content="DJ, música eletrônica, house, techno, festival, eventos, booking, contratação">
+  <meta name="author" content="DLUKZ">
+  <meta name="theme-color" content="#050510">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DLUKZ — Portfólio Oficial">
+  <meta property="og:description" content="Sets exclusivos, apresentações em festivais e eventos. Contrate agora.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero-bg.jpg">
+
+  <title>DLUKZ — Portfólio Oficial</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo" aria-label="DLUKZ">
+        <img src="assets/images/logo.png" alt="DLUKZ Logo" class="brand-logo" />
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#player">Sets</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </div>
+
+      <div class="nav-toggle" id="nav-toggle" aria-label="Menu" role="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <!-- Background Image -->
+    <div class="hero-bg">
+      <img src="assets/images/hero-bg.jpg" alt="DLUKZ em performance ao vivo" loading="eager">
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Particle Canvas -->
+    <canvas class="hero-canvas" id="hero-particles"></canvas>
+
+    <!-- Content -->
+    <div class="hero-content">
+      <p class="hero-genre">House · Tech House · Melodic Techno</p>
+      <h1 class="hero-name">DLUKZ</h1>
+      <p class="hero-tagline">Transformando noites em experiências inesquecíveis há mais de uma década.</p>
+      <div class="hero-cta">
+        <a href="#contato" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          Contratar para Evento
+        </a>
+        <a href="#player" class="btn btn-outline">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Ouvir Último Set
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-chevron"></div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PLAYER SECTION
+       ============================================ -->
+  <section class="player-section" id="player">
+    <div class="container">
+      <div class="player-header reveal">
+        <span class="section-label">Ouça Agora</span>
+        <h2 class="section-title">Últimos Sets & Tracks</h2>
+        <p class="section-desc">Dê play direto do site. Confira os sets mais recentes e tracks exclusivas.</p>
+      </div>
+
+      <div class="player-grid">
+        <!-- Spotify Player -->
+        <div class="player-card glass-card reveal reveal-delay-1">
+          <div class="player-card-label">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+            </svg>
+            Spotify
+          </div>
+          <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXa2PvUpywmrr?utm_source=generator&theme=0"
+            height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy" style="border-radius: 12px;">
+          </iframe>
+        </div>
+
+        <!-- SoundCloud Player -->
+        <div class="player-card glass-card reveal reveal-delay-2">
+          <div class="player-card-label" style="color: #ff5500;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m-.899.828c-.06 0-.091.037-.104.094L0 14.479l.165 1.308c.014.057.045.094.104.094s.09-.037.104-.094l.21-1.308-.21-1.334c-.014-.057-.045-.094-.104-.094m1.844-1.261c-.06 0-.105.045-.112.105l-.21 2.563.21 2.458c.007.06.052.105.112.105.06 0 .105-.045.112-.105l.24-2.458-.24-2.563c-.007-.06-.052-.105-.112-.105m.9-.42c-.074 0-.128.06-.135.135l-.18 2.978.18 2.828c.007.075.06.135.135.135.074 0 .127-.06.135-.135l.21-2.828-.21-2.978c-.008-.075-.06-.135-.135-.135m.9-.36c-.09 0-.15.075-.157.15l-.15 3.338.15 3.12c.007.075.067.15.157.15.09 0 .15-.075.157-.15l.165-3.12-.165-3.338c-.007-.09-.067-.15-.157-.15m.93-.39c-.1 0-.165.09-.172.165l-.12 3.728.12 3.18c.007.09.072.165.172.165.09 0 .164-.075.172-.165l.135-3.18-.135-3.728c-.008-.09-.082-.165-.172-.165m.96-.27c-.105 0-.18.09-.187.18L5.46 14.47l.113 3.24c.007.09.082.18.187.18.104 0 .18-.09.187-.18l.12-3.24-.12-3.737c-.007-.09-.083-.18-.187-.18m1.005-.12c-.12 0-.21.105-.217.21l-.09 3.858.09 3.27c.007.105.097.21.217.21.12 0 .21-.105.217-.21l.104-3.27-.104-3.857c-.007-.12-.097-.21-.217-.21m.99 0c-.135 0-.232.12-.232.232l-.075 3.848.075 3.24c0 .12.097.232.232.232.135 0 .232-.112.232-.232l.082-3.24-.082-3.848c0-.12-.097-.232-.232-.232m1.05-.112c-.15 0-.255.12-.255.247l-.06 3.96.06 3.21c0 .135.105.247.255.247.15 0 .255-.112.255-.247l.067-3.21-.067-3.96c0-.135-.105-.247-.255-.247m1.02-.052c-.165 0-.285.135-.285.27l-.045 4.012.045 3.165c0 .15.12.27.285.27.15 0 .285-.12.285-.27l.053-3.165-.053-4.012c0-.15-.12-.27-.285-.27m1.065-.187c-.18 0-.3.15-.3.292l-.03 4.2.03 3.12c0 .165.12.293.3.293.165 0 .3-.128.3-.293l.037-3.12-.037-4.2c0-.157-.135-.292-.3-.292m1.05-.15c-.195 0-.33.165-.33.315l-.015 4.35.015 3.06c0 .165.135.315.33.315.18 0 .33-.15.33-.315l.022-3.06-.022-4.35c0-.165-.15-.315-.33-.315m1.095.18c-.21 0-.345.165-.345.33v.015l-.015 4.155.015 3.03c0 .165.135.33.345.33.195 0 .345-.165.345-.33l.015-3.03-.015-4.17c0-.165-.15-.33-.345-.33m1.11-.21c-.225 0-.375.18-.375.36l-.008 4.38.008 3c0 .18.15.36.375.36.21 0 .375-.18.375-.36l.007-3-.007-4.38c0-.18-.165-.36-.375-.36m1.08 0c-.24 0-.39.195-.39.375l-.007 4.38.007 2.97c0 .195.15.375.39.375.225 0 .39-.18.39-.375l.008-2.97-.008-4.38c0-.195-.165-.375-.39-.375m3.478 1.012c-.285 0-3.06-.15-3.06-.15-.24 0-.39.195-.39.39v4.2c0 .015 0 .03.007.045.007.21.09.39.24.525.165.135.375.21.6.21h2.61c1.32 0 2.392-1.073 2.392-2.393-.008-1.32-1.08-2.827-2.4-2.827" />
+            </svg>
+            SoundCloud
+          </div>
+          <iframe width="100%" height="352" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1&color=%23ed9e6f&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- YouTube Player -->
+        <div class="player-card glass-card reveal reveal-delay-3">
+          <div class="player-card-label" style="color: #ff0000;">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+            YouTube
+          </div>
+          <iframe width="100%" height="352"
+            src="https://www.youtube.com/embed/videoseries?list=PLRqwX-V8aeaYOyFxGe6poyC0e4gRjt9k-&si=demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy" style="border-radius: 12px;">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       AGENDA SECTION
+       ============================================ -->
+  <section class="agenda-section" id="agenda">
+    <div class="container">
+      <div class="agenda-header reveal">
+        <span class="section-label">Próximos Shows</span>
+        <h2 class="section-title">Agenda 2026</h2>
+        <p class="section-desc">Confira os próximos eventos e garanta seu ingresso.</p>
+      </div>
+
+      <div class="agenda-list">
+        <!-- Show 1 -->
+        <div class="agenda-card glass-card reveal reveal-delay-1">
+          <div class="agenda-date">
+            <span class="day">05</span>
+            <span class="month">SET</span>
+          </div>
+          <div class="agenda-info">
+            <h3>Warehouse Festival</h3>
+            <div class="venue-details">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                São Paulo, SP
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                23h — 06h
+              </span>
+            </div>
+            <span class="agenda-badge badge-available">Ingressos Disponíveis</span>
+          </div>
+          <div class="agenda-action">
+            <a href="#" class="btn btn-primary btn-sm">Comprar Ingresso</a>
+          </div>
+        </div>
+
+        <!-- Show 2 -->
+        <div class="agenda-card glass-card reveal reveal-delay-2">
+          <div class="agenda-date">
+            <span class="day">19</span>
+            <span class="month">SET</span>
+          </div>
+          <div class="agenda-info">
+            <h3>Club Nocturna — Techno Night</h3>
+            <div class="venue-details">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Rio de Janeiro, RJ
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                00h — 07h
+              </span>
+            </div>
+            <span class="agenda-badge badge-soldout">Esgotado</span>
+          </div>
+          <div class="agenda-action">
+            <span class="btn btn-outline btn-sm" style="opacity: 0.5; cursor: default;">Esgotado</span>
+          </div>
+        </div>
+
+        <!-- Show 3 -->
+        <div class="agenda-card glass-card reveal reveal-delay-3">
+          <div class="agenda-date">
+            <span class="day">11</span>
+            <span class="month">OUT</span>
+          </div>
+          <div class="agenda-info">
+            <h3>Sunset Beach Festival</h3>
+            <div class="venue-details">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Florianópolis, SC
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                16h — 00h
+              </span>
+            </div>
+            <span class="agenda-badge badge-available">Ingressos Disponíveis</span>
+          </div>
+          <div class="agenda-action">
+            <a href="#" class="btn btn-primary btn-sm">Comprar Ingresso</a>
+          </div>
+        </div>
+
+        <!-- Show 4 -->
+        <div class="agenda-card glass-card reveal reveal-delay-4">
+          <div class="agenda-date">
+            <span class="day">25</span>
+            <span class="month">OUT</span>
+          </div>
+          <div class="agenda-info">
+            <h3>Rooftop Sessions — Ed. Mirante</h3>
+            <div class="venue-details">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Belo Horizonte, MG
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                18h — 02h
+              </span>
+            </div>
+            <span class="agenda-badge badge-soon">Em Breve</span>
+          </div>
+          <div class="agenda-action">
+            <span class="btn btn-outline btn-sm" style="opacity: 0.7; cursor: default;">Em Breve</span>
+          </div>
+        </div>
+
+        <!-- Show 5 -->
+        <div class="agenda-card glass-card reveal reveal-delay-5">
+          <div class="agenda-date">
+            <span class="day">15</span>
+            <span class="month">NOV</span>
+          </div>
+          <div class="agenda-info">
+            <h3>New Year Countdown Festival</h3>
+            <div class="venue-details">
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Curitiba, PR
+              </span>
+              <span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                22h — 06h
+              </span>
+            </div>
+            <span class="agenda-badge badge-available">Ingressos Disponíveis</span>
+          </div>
+          <div class="agenda-action">
+            <a href="#" class="btn btn-primary btn-sm">Comprar Ingresso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PRESS KIT & GALLERY SECTION
+       ============================================ -->
+  <section class="presskit-section" id="galeria">
+    <div class="container">
+      <div class="presskit-grid">
+        <!-- Bio / Press Kit -->
+        <div class="presskit-bio reveal">
+          <span class="section-label">Press Kit</span>
+          <h2 class="section-title">Sobre DLUKZ</h2>
+
+          <div class="bio-text">
+            <p>
+              Com mais de 12 anos de carreira na cena eletrônica, <strong>DLUKZ</strong> se consolidou como um dos
+              nomes mais requisitados do circuito brasileiro de house e techno. Sua assinatura sonora transita entre o
+              groove contagiante do tech house e as atmosferas hipnóticas do melodic techno.
+            </p>
+            <p>
+              Já se apresentou nos maiores festivais do Brasil e dividiu palco com artistas internacionais como Solomun,
+              Boris Brejcha e Vintage Culture. Seus sets são marcados por transições impecáveis, energia crescente e uma
+              conexão única com a pista.
+            </p>
+            <p>
+              Fora das cabines, DLUKZ é produtor musical com lançamentos em selos renomados e um podcast semanal que
+              alcança milhares de ouvintes em mais de 30 países.
+            </p>
+          </div>
+
+          <div class="presskit-stats">
+            <div class="stat-item glass-card">
+              <div class="stat-number">12+</div>
+              <div class="stat-label">Anos de Carreira</div>
+            </div>
+            <div class="stat-item glass-card">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Shows</div>
+            </div>
+            <div class="stat-item glass-card">
+              <div class="stat-number">85K</div>
+              <div class="stat-label">Seguidores</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery-wrapper reveal reveal-delay-2">
+          <h3 class="gallery-title">📸 Galeria de Eventos</h3>
+
+          <div class="gallery-carousel">
+            <div class="gallery-track">
+              <div class="gallery-slide">
+                <img src="assets/images/gallery-1.jpg" alt="DLUKZ em rooftop party ao pôr do sol">
+                <div class="gallery-slide-overlay">
+                  <span class="gallery-slide-caption">Rooftop Session — São Paulo</span>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <img src="assets/images/gallery-2.jpg" alt="Festival de música eletrônica com multidão">
+                <div class="gallery-slide-overlay">
+                  <span class="gallery-slide-caption">Warehouse Festival 2025</span>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <img src="assets/images/gallery-3.jpg" alt="Close-up das mãos no equipamento DJ">
+                <div class="gallery-slide-overlay">
+                  <span class="gallery-slide-caption">Bastidores — Studio Session</span>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <img src="assets/images/gallery-4.jpg" alt="DJ entrando no palco, silhueta com luzes">
+                <div class="gallery-slide-overlay">
+                  <span class="gallery-slide-caption">Backstage — Antes do Show</span>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <img src="assets/images/gallery-5.jpg" alt="Beach club party ao entardecer">
+                <div class="gallery-slide-overlay">
+                  <span class="gallery-slide-caption">Sunset Beach Club — Floripa</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="gallery-nav prev" aria-label="Foto anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="gallery-nav next" aria-label="Próxima foto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Dots -->
+          <div class="gallery-dots">
+            <button class="gallery-dot active" aria-label="Slide 1"></button>
+            <button class="gallery-dot" aria-label="Slide 2"></button>
+            <button class="gallery-dot" aria-label="Slide 3"></button>
+            <button class="gallery-dot" aria-label="Slide 4"></button>
+            <button class="gallery-dot" aria-label="Slide 5"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT / BOOKING SECTION
+       ============================================ -->
+  <section class="contact-section" id="contato">
+    <div class="container">
+      <div class="contact-header reveal">
+        <span class="section-label">Booking</span>
+        <h2 class="section-title">Contrate DLUKZ</h2>
+        <p class="section-desc">Preencha o formulário abaixo e receba um orçamento personalizado em até 24 horas.</p>
+      </div>
+
+      <form class="contact-form glass-card" id="booking-form">
+        <div class="form-fields">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-date">Data do Evento <span class="required">*</span></label>
+              <input type="date" id="contact-date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-event-type">Tipo de Evento <span class="required">*</span></label>
+              <select id="contact-event-type" class="form-input" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="festival">Festival</option>
+                <option value="club">Club / Casa Noturna</option>
+                <option value="corporativo">Evento Corporativo</option>
+                <option value="casamento">Casamento</option>
+                <option value="aniversario">Aniversário / Festa Privada</option>
+                <option value="formatura">Formatura</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-city">Cidade <span class="required">*</span></label>
+              <input type="text" id="contact-city" class="form-input" placeholder="São Paulo, SP" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-budget">Orçamento Previsto</label>
+              <select id="contact-budget" class="form-input">
+                <option value="" disabled selected>Selecione a faixa...</option>
+                <option value="ate-5k">Até R$ 5.000</option>
+                <option value="5k-10k">R$ 5.000 — R$ 10.000</option>
+                <option value="10k-20k">R$ 10.000 — R$ 20.000</option>
+                <option value="20k-50k">R$ 20.000 — R$ 50.000</option>
+                <option value="acima-50k">Acima de R$ 50.000</option>
+                <option value="a-combinar">A combinar</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Mensagem</label>
+            <textarea id="contact-message" class="form-input"
+              placeholder="Conte mais detalhes sobre o evento: local, horário, público esperado, etc."
+              rows="5"></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+              Enviar Solicitação
+            </button>
+          </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <h3>Solicitação Enviada!</h3>
+          <p>Obrigado pelo interesse! Retornaremos em até 24 horas com um orçamento personalizado.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FLOATING MINI PLAYER
+       ============================================ -->
+  <div class="mini-player" id="mini-player">
+    <div class="mini-player-info">
+      <div class="mini-player-art">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13" />
+          <circle cx="6" cy="18" r="3" />
+          <circle cx="18" cy="16" r="3" />
+        </svg>
+      </div>
+      <div class="mini-player-text">
+        <h4>DLUKZ — Últimos Sets</h4>
+        <p>Ouça os sets mais recentes</p>
+      </div>
+    </div>
+    <div class="mini-player-action">
+      <a href="#player" class="btn btn-primary btn-sm">
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3" />
+        </svg>
+        Ouvir Agora
+      </a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="#hero" class="footer-logo" aria-label="DLUKZ">
+          <img src="assets/images/logo.png" alt="DLUKZ Logo" class="brand-logo" />
+        </a>
+
+        <div class="footer-social">
+          <!-- Instagram -->
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <!-- TikTok -->
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.11V9a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.25 8.25 0 0 0 4.78 1.52V6.79a4.84 4.84 0 0 1-1.02-.1z" />
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+            </svg>
+          </a>
+          <!-- Spotify -->
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z" />
+            </svg>
+          </a>
+          <!-- SoundCloud -->
+          <a href="#" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M1.175 12.225c-.051 0-.094.046-.101.1l-.233 2.154.233 2.105c.007.058.05.098.101.098.05 0 .09-.04.099-.098l.255-2.105-.27-2.154c-.009-.06-.05-.1-.1-.1m3.478 1.012c-.285 0-3.06-.15-3.06-.15-.24 0-.39.195-.39.39v4.2c0 .015 0 .03.007.045.007.21.09.39.24.525.165.135.375.21.6.21h2.61c1.32 0 2.392-1.073 2.392-2.393-.008-1.32-1.08-2.827-2.4-2.827" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="footer-copy">
+        &copy; 2026 DLUKZ. Todos os direitos reservados. | Design com 💜
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       LIGHTBOX
+       ============================================ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+
+</html>
